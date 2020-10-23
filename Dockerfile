@@ -46,4 +46,5 @@ RUN mkdir -p /usr/share/wine/mono
 
 COPY --from=0 /root/.wine /root/.wine
 COPY --from=0 /tmp/wine-mono /usr/share/wine/mono
-COPY ${source:-obj/Docker/publish} .
+
+RUN winetricks
