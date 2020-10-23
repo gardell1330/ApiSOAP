@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ApiSOAP.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ApiSOAP_BLZService_BLZService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.thomas-bayer.com/axis2/services/BLZService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
