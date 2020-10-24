@@ -36,7 +36,7 @@ RUN set -x \
 RUN set -x \
     && curl -o /root/.wine/drive_c/windows/syswow64/nuget.exe https://dist.nuget.org/win-x86-commandline/v4.5.3/nuget.exe \
     && git clone https://github.com/gardell1330/ApiSOAP /app \
-    && cd '/app/ApiSOAP' \
+    && cd '/app/apisoap' \
     && export WINEPATH='C:/windows/Microsoft.NET/Framework64/v4.0.30319' \
     && export WINEDEBUG=-all \
     && wine nuget install MSBuild.Microsoft.VisualStudio.Web.targets -Version 14.0.0.3 -OutputDirectory packages \
