@@ -26,10 +26,10 @@ RUN set -x \
     && export WINEDEBUG=-all \
     && xvfb-run wine /tmp/ndp461-devpack-kb3105179-enu.exe /q
 
-# Various dev tools
-RUN set -x \
-    && apt-get update \
-    && apt-get -y install vim mc tree less locate procps net-tools
+## Various dev tools
+#RUN set -x \
+    #&& apt-get update \
+    #&& apt-get -y install vim mc tree less locate procps net-tools
 
 # Compile sample project based on ASP.NET Web Forms
 # NuGet <= v4.5.3 works under Wine v4.16 Staging but NuGet v4.6.4+ crashes with Win32Exception
