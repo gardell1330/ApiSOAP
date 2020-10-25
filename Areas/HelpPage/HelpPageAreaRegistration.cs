@@ -1,5 +1,6 @@
 using System.Web.Http;
 using System.Web.Mvc;
+using ApiSOAP.Areas.HelpPage.App_Start;
 
 namespace ApiSOAP.Areas.HelpPage
 {

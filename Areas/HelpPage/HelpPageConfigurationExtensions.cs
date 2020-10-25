@@ -13,6 +13,7 @@ using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using ApiSOAP.Areas.HelpPage.ModelDescriptions;
 using ApiSOAP.Areas.HelpPage.Models;
+using ApiSOAP.Areas.HelpPage.SampleGeneration;
 
 namespace ApiSOAP.Areas.HelpPage
 {

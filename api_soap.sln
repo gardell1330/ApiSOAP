@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSOAP", "ApiSOAP.csproj", "{154FC183-285D-48A4-857E-B26619C9FAE4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api_soap", "api_soap.csproj", "{154FC183-285D-48A4-857E-B26619C9FAE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
