@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && wget https://dl.winehq.org/wine/wine-mono/${WINE_MONO_VERSION}/wine-mono-${WINE_MONO_VERSION}.msi -O /tmp/wine-mono/wine-mono-${WINE_MONO_VERSION} \ 
     # Install .NET Framework 2.0 and 4.6.2
     && wine wineboot --init \
-    && waitforprocess.sh wineserver \
+    #&& waitforprocess.sh wineserver \
     && x11-start.sh \
     && winetricks --unattended -q --force dotnet461 dotnet_verifier    
 
