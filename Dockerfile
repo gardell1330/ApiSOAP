@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     xvfb \
     zenity \
     # Winetricks and Permissions
-    && wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks -O /usr/local/bin/winetricks \
+    && curl -s https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks > /usr/local/bin/winetricks \
     && chmod +x /usr/local/bin/winetricks \
     && chmod +x /usr/local/bin/*.sh \
     # Mono For Wine
@@ -34,7 +34,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && wine wineboot --init \
     && waitforprocess.sh wineserver \
     && x11-start.sh \
-    && winetricks --unattended --force dotnet20 dotnet462 dotnet_verifier
+    && winetricks --unattended -q --force dotnet461 dotnet_verifier    
+
+# .NET Framework 4.6.1 Developer Pack installer requires X server
+RUN set -x \
+    curl -L -o /tmp/ndp461-devpack-kb3105179-enu.exe https://go.microsoft.com/fwlink/?linkid=2099470 \
+    && export WINEDEBUG=-all \
+    && xvfb-run wine /tmp/ndp461-devpack-kb3105179-enu.exe /q
 
 # Copy Over Wine Prefix
 FROM maloneweb/docker-wine-base:latest
